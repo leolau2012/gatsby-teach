@@ -47,7 +47,9 @@ export default connect(mapStateToProps, mapDispatchToProps) (Template)
 
 export const pageQuery = graphql`
   query($path: String!) {
-    markdownRemark(fields: { slug: { eq: $path} }) {
+    markdownRemark(
+      fields: { slug: { eq: $path} }
+      ) {
       fields {
         slug
       }

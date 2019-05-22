@@ -52,7 +52,7 @@ const sortTree = tree => {
   tree.sort((a,b)=> {
     if (((a.children && b.children) || 
     (!a.children && !b.children)) &&
-    a.title > b.title) return 1
+    parseFloat(a.title) > parseFloat(b.title)) return 1
     else if (a.children) return 1
     return -1
   })
